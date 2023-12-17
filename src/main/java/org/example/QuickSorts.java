@@ -38,17 +38,23 @@ public class QuickSorts {
 
         for (int j = low; j <= high; j++) {
 
-            if (j == high || arr[j] < arr[high]) {
+            if (j == high || arr[j] < arr[high] ) {
 
                 swap(arr, i, j);
-                i++;
+                if(i<arr.length-1){
+                    i++;
+                }
+
             }
             //jesli randomowa liczba podzielna przez 2 to traktujemy obiekt rowny pivotowi jako nizszy
-            if (arr[j] == arr[high]) {
+            if (arr[j] == arr[high] ) {
                 int coinFlip = random.nextInt();
                 if (coinFlip % 2 == 0) {
+
                     swap(arr, i, j);
-                    i++;
+                    if(i<arr.length-1){
+                        i++;
+                    }
                 }
             }
         }
@@ -137,6 +143,7 @@ public class QuickSorts {
         for (int j : arr) {
             System.out.print(j + " ");
         }
+        System.out.println(" ");
     }
 }
 
