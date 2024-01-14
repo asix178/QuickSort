@@ -1,10 +1,12 @@
 package org.example;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Random;
 
 public class QuickSorts {
 
-    static void swap(int[] arr, int i, int j) {
+    static void swap(int @NotNull [] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
